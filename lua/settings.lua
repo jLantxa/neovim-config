@@ -15,3 +15,7 @@ vim.api.nvim_set_keymap('n', ']b', ':BufferLineCycleNext<CR>', {noremap = true, 
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
+-- Setup plugins
+require("nvim-tree").setup()
+require("bufferline").setup()
+require('feline').setup()
