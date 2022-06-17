@@ -1,19 +1,35 @@
 require('packer').startup(function()
-    use 'wbthomason/packer.nvim'
+    use {
+        'wbthomason/packer.nvim'
+    }
 
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- Requires Neovim >= 0.7
-    -- (or >= 0.5 with the 0.5-compat branch)
-    use {'feline-nvim/feline.nvim', branch = 'master'}
+    use {
+        'feline-nvim/feline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('feline').setup()
+        end
+    }
 
-    use 'nvim-lua/plenary.nvim'
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v2.*",
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup()
+        end
+    }
+
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = {'nvim-lua/plenary.nvim', }
     }
 
     -- Nightfox themes:
     -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox
-    use "EdenEast/nightfox.nvim"
+    use {
+        "EdenEast/nightfox.nvim"
+    }
 end)

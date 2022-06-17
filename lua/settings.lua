@@ -8,4 +8,5 @@ vim.o.termguicolors = true
 
 vim.cmd("colorscheme nightfox")
 
-require('feline').setup()
+vim.api.nvim_set_keymap('n', '[b', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', ']b', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
