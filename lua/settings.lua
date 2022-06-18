@@ -6,7 +6,7 @@ vim.wo.number = true
 
 vim.o.termguicolors = true
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme sonokai")
 
 -- bufferline
 vim.api.nvim_set_keymap('n', '[b', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
@@ -18,4 +18,7 @@ vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, si
 -- Setup plugins
 require("nvim-tree").setup()
 require("bufferline").setup()
-require('feline').setup()
+require("feline").setup()
+
+require('lspconfig')['clangd'].setup{}
+require('lspconfig')['pyright'].setup{}

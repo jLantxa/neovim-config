@@ -24,15 +24,17 @@ require('packer').startup(function()
 
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {
-	        'nvim-lua/plenary.nvim',
-	    },
+        requires = 'nvim-lua/plenary.nvim',
     }
+
+    use 'neovim/nvim-lspconfig'
 
     -- Nightfox themes:
     -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox
-    use {
-        "EdenEast/nightfox.nvim"
-    }
+    use "EdenEast/nightfox.nvim"
+    -- Tokyo Night themes
+    use 'folke/tokyonight.nvim'
+    -- Sonokay themes
+    use 'sainnhe/sonokai'
 end)
 
