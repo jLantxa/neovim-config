@@ -9,8 +9,8 @@ vim.o.termguicolors = true
 vim.cmd("colorscheme sonokai")
 
 -- bufferline
-vim.api.nvim_set_keymap('n', '[b', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', ']b', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'çb', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'çn', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
 
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
@@ -22,3 +22,5 @@ require("feline").setup()
 
 require('lspconfig')['clangd'].setup{}
 require('lspconfig')['pyright'].setup{}
+
+
