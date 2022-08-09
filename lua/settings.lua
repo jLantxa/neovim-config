@@ -1,13 +1,17 @@
-vim.o.mouse = "a"
+-- Enable mouse
+--vim.o.mouse = "a"
 
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
+-- Configure tab
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 0
+vim.opt.expandtab = false
 
 vim.wo.number = true
 
+-- Colour scheme
 vim.o.termguicolors = true
-
 vim.cmd("colorscheme sonokai")
 
 -- bufferline
