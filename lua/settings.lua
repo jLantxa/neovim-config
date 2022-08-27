@@ -5,6 +5,9 @@ vim.cmd("colorscheme sonokai")
 -- nvim-tree
 require('nvim-tree').setup()
 
+-- nvim-autopairs
+require('nvim-autopairs').setup()
+
 -- bufferline
 require('bufferline').setup()
 vim.api.nvim_set_keymap('n', '[b', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
