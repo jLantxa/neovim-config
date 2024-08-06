@@ -10,12 +10,9 @@ end
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use 'nvim-lualine/lualine.nvim'
-    use {
-        'akinsho/bufferline.nvim',
-        tag = "v2.*",
-        requires = 'kyazdani42/nvim-web-devicons',
-    }
+    use 'nvim-lualine/lualine.nvim' 
+    use 'nvim-tree/nvim-web-devicons'
+    use 'romgrk/barbar.nvim'
     use {
         'nvim-tree/nvim-tree.lua',
         requires = 'nvim-tree/nvim-web-devicons',
